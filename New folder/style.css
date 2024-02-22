@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.cedarville-cursive-regular {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+
+.navbar{
+    background-color: transparent;
+
+    height: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top:30px;
+    z-index: 999;
+}
+
+
+.navbar__container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index:1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+    
+}
+
+#navbar__logo{
+    top: 20px;
+    background-color: #fff;
+    background-size:100%;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    display:inline-flex;
+    align-items: center;
+    cursor:pointer;
+    text-decoration:lightgreen;
+    font-size : 3rem;
+    font-style:unset ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+/*#navbar__text{
+    background-color: #fff;
+    background-size:100%;
+    -webkit-background-clip: text;
+    -moz-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color:transparent;
+    display:ruby-base-container;
+    align-items: left;
+    cursor:pointer;
+    text-decoration:lightgreen;
+    font-size : 3rem;
+    font-style:unset ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}*/
+.fa-gem{
+    margin-right:0.5rem;
+}
+
+.navbar__menu{
+    display: flex;
+    align-items:center;
+    list-style: none;
+    text-align:center;
+}
+
+.navbar__item{
+    height: 80px;
+
+}
+
+.navbar__links{
+    color:#fff;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration : none;
+    padding: 0 1rem;
+    height: 100%;
+}
+.navbar__btn{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.button{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    padding: 40px 20px;
+    height: 100%;
+    width:100%;
+    border:none;
+    outline:none;
+    border-radius:4px;
+    background:transparent;
+    color: #e51010;
+
+
+}
+.button:hover{
+    background:#ededed;
+    transition: all 0.5s ease;
+}
+
+.navbar__links:hover{
+    color:#f77062;
+    transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 960px) {
+    .navbar__container{
+        display:flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index:20;
+        width: 100%;
+        max-width:1300px;
+        padding: 0;
+
+    }
+
+
+    .navbar__menu{
+        display:grid;
+        grid-template-columns:auto;
+        margin : 0;
+        width : 100%;
+        position : absolute;
+        top : 100px;
+        opacity : 0;
+        transition: all 0.5s ease;
+        height: 50vh;
+        z-index: -1;
+        background: #131313;
+    }
+
+    .navbar__menu.active{
+        background: #131313;
+        top: 100%;
+        opacity:1;
+        transition: all 0.5s ease;
+        z-index: 20px;
+        height: 50vh;
+        font-size: 1.6rem;
+    }
+
+    #navbar__logo{
+        padding-left: 25px;
+    }
+
+    .navbar__toggle .bar{
+        width:25px;
+        height: 3px;
+        margin : 5px 20px;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    
+    }
+
+    .navbar__item{
+        width: 100%;
+    }
+
+    .navbar__links{
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    #moblie-menu{
+        position: absolute;
+        top:20%;
+        right:5%;
+        transform : translate(5%, 20%);
+        z-index: 20px;
+    }
+
+    .navbar__btn {
+        padding-bottom: 2rem;
+    }
+
+    .button{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width:80%;
+        height: 80px;
+        margin: 0;
+    }
+
+    .navbar__toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+}
+
+.main{
+    background-color: #141414
+}
+
+.main__container{
+    display:ruby-text-container;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self:center;
+    height: 90vh;
+    background-color:#141414;
+    z-index : 1;
+    width : 100%;
+    max-width : 1300px;
+    padding: 0 0px;
+}
+
+.main__content h1{
+    position:absolute;
+    left:5%;
+    top:8%;
+    font-size: 4rem;
+    background-color : #010101;
+    background-image : #fff;
+    background-size : 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-family: "Cedarville Cursive";
+    font-weight: 500;
+    font-style:oblique;
+      
+    
+}
+
+.main__content h2{
+    position:absolute;
+    left:40%;
+    top:70%;
+    align-items: center;
+    font-size: 3rem;
+    background-color : #fff;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    font-style: italic;
+
+}
+.main__content p{
+    position:absolute;
+    left:43%;
+    top: 79%;
+    background-color:#fff;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+
+
+}
+.part__btn{
+    position:absolute;
+    left:10%;
+    top:200%;
+    font-size:3rem;
+    font-style: italic;
+    padding: 2px 12px;
+    
+    outline-width: 0cm;
+    border-color:transparent;
+    transition:all 0.75s;
+    border-radius: 10px;
+      
+
+}
+.part__btn a {
+    position: relative;
+    z-index: 2;
+
+}
+
+
+.part__btn:hover{
+    color:#ec0202;
+    cursor: pointer;
+}
+
+.part__btn:hover:after {
+    width: 100%;
+}
+
+.main__img--container{
+    text-align:center ;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: black; 
+    opacity: 0; 
+    transition: height 0.5s, opacity 0.5s; 
+  }
+.top_box{
+    position: fixed;
+    top: 0;
+    left: 62%;
+    width: 100%;
+    height: 0;
+    background-color: rgb(6, 5, 5); 
+    opacity: 0;
+    transition: height 0.5s, opacity 0.5s; 
+}
